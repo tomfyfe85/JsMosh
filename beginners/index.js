@@ -1,19 +1,9 @@
-// primitive types:
-// String
-// Number
-// Boolean
-// undefined
-// null
+for (let i = 0; i <= 5; i++) {
+  if (i % 2 !== 0) console.log(i);
+}
 
-// Bitwise operators
-let a = "red";
-let b = "blue";
-
-let placeHolder = "";
-
-placeHolder = a;
-a = b;
-b = placeHolder;
-
-console.log(a);
-console.log(b);
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+}
