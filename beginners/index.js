@@ -1,29 +1,16 @@
-// for (let i = 0; i <= 5; i++) {
-//   if (i % 2 !== 0) console.log(i);
-// }
+const result = checkSpeed(799);
+console.log(result);
 
-// for
-// while
-// do-while
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
 
-// for-in loop
-// const person = {
-//   name: "Tom",
-//   age: 30,
-// };
+  if (speed <= speedLimit) {
+    console.log("Ok");
+    return;
+  }
 
-// for (let key in person) console.log(key, person[key]);
-
-// const colours = ["red", "green", "blue"];
-
-// // for (let i in colours) console.log(i, colours[i]);
-
-// // for-of loop
-// for (let colour of colours) console.log(colour);
-
-let number = maximumFinder(1, 2);
-console.log(number);
-
-function maximumFinder(num1, num2) {
-  return num1 > num2 ? num1 : num2;
+  let points = Math.floor((speed - speedLimit) / kmPerPoint);
+  if (points >= 12) console.log("Licence suspended");
+  else console.log(points + " points");
 }
