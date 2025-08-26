@@ -15,17 +15,14 @@
 //   else console.log(points + " points");
 // }
 
-const movie = {
-  title: "a",
-  year: 1995,
-  rating: 4.5,
-  director: "b",
-};
+console.log(sum(10));
 
-function showProperties(obj) {
-  for (const prop in obj) {
-    if (typeof obj[prop] === "string") console.log(obj[prop], prop);
+function sum(limit) {
+  let sum = 0;
+
+  for (let i = 0; i <= limit; i++) {
+    if (i % 3 === 0 || i % 5 === 0) sum += i;
   }
-}
 
-console.log(showProperties(movie));
+  return sum;
+}
