@@ -15,12 +15,17 @@
 //   else console.log(points + " points");
 // }
 
-const result = showNumbers(10);
-console.log(result);
+const movie = {
+  title: "a",
+  year: 1995,
+  rating: 4.5,
+  director: "b",
+};
 
-function showNumbers(limit) {
-  for (let i = 0; i <= limit; i++) {
-    const message = i % 2 === 0 ? "EVEN" : "ODD";
-    console.log(i, message);
+function showProperties(obj) {
+  for (const prop in obj) {
+    if (typeof obj[prop] === "string") console.log(obj[prop], prop);
   }
 }
+
+console.log(showProperties(movie));
