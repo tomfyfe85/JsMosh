@@ -15,14 +15,24 @@
 //   else console.log(points + " points");
 // }
 
-console.log(sum(10));
+// console.log(sum(10));
 
-function sum(limit) {
-  let sum = 0;
+// function sum(limit) {
+//   let sum = 0;
 
-  for (let i = 0; i <= limit; i++) {
-    if (i % 3 === 0 || i % 5 === 0) sum += i;
+//   for (let i = 0; i <= limit; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) sum += i;
+//   }
+
+//   return sum;
+// }
+
+showStars(5);
+
+function showStars(rows) {
+  stars = "";
+  for (let i = 1; i <= rows; i++) {
+    stars += "*";
+    console.log(stars);
   }
-
-  return sum;
 }
