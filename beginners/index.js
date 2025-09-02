@@ -27,12 +27,26 @@
 //   return sum;
 // }
 
-showStars(5);
+// showStars(2);
 
-function showStars(rows) {
-  stars = "";
-  for (let i = 1; i <= rows; i++) {
-    stars += "*";
-    console.log(stars);
+// function showStars(rows) {
+//   stars = "";
+//   for (let i = 1; i <= rows; i++) {
+//     stars += "*";
+//     console.log(stars);
+//   }
+// }
+
+function findPrime(iteration) {
+  for (let factor = 2; factor <= iteration - 1; factor++)
+    if (iteration % factor == 0) return true;
+}
+
+function showPrime(num) {
+  for (let number = 2; number <= num; number++) {
+    if (findPrime(number)) continue;
+    else console.log(number);
   }
 }
+
+showPrime(50);
