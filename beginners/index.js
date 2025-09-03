@@ -103,5 +103,49 @@ const circle = {
 // console.log(another);
 
 // USE SPREAD OPERATOR
-const another = { ...circle };
-console.log(another);
+// const another = { ...circle };
+// console.log(another);
+
+// const message = "This is a\n message";
+// console.log(message);
+
+// Template literals
+
+// const another = `This 'is'
+// my string,
+
+// Testing out lines,
+
+// Thanks!`;
+// console.log(another);
+
+// Date Object
+
+// const now = new Date();
+// const date1 = new Date("May 11 2018 09:00");
+
+// now.setHours(2, 45, 30, 200);
+
+// const address = {
+//   street: 123,
+//   city: "london",
+//   zip: "12221",
+// };
+
+function factory(street, city, zip) {
+  return {
+    street,
+    city,
+    zip,
+  };
+}
+
+const address = factory(1, 2, 3);
+console.log(address);
+
+function NewAddress(street, city, zip) {
+  (this.street = street), (this.city = city), (this.zip = zip);
+}
+
+const newAddress = new NewAddress(1, 2, 3);
+console.log(newAddress);
