@@ -37,16 +37,71 @@
 //   }
 // }
 
-function findPrime(iteration) {
-  for (let factor = 2; factor <= iteration - 1; factor++)
-    if (iteration % factor == 0) return true;
+// function findPrime(iteration) {
+//   for (let factor = 2; factor < iteration; factor++)
+//     if (iteration % factor == 0) return false;
+
+//   return true;
+// }
+
+// function showPrime(num) {
+//   for (letnumber = 2; number <= num; number++) {
+//     if (findPrime(number)) console.log(number);
+//   }
+// }
+
+// showPrime(50);
+
+// factory function
+// camel notation
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draw");
+    },
+  };
 }
 
-function showPrime(num) {
-  for (let number = 2; number <= num; number++) {
-    if (findPrime(number)) continue;
-    else console.log(number);
-  }
-}
+// const myCircle = createCircle(5);
+// myCircle.draw();
 
-showPrime(50);
+// constructor function
+// pascal notation
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     consle.log("draw");
+//   };
+// }
+
+// const myCircle = new Circle(1);
+// console.log(myCircle.radius);
+
+const circle = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
+
+// for (key in circle) console.log(key, circle[key]);
+
+// const arr = [1, 2, 3, 4];
+// for (let key of Object.keys(circle)) console.log(circle[key]);
+
+//
+// if ("radius" in circle) console.log("yes");
+
+// const another = {};
+// for (let key in circle) another[key] = circle[key];
+// console.log(another);
+
+// New way is to use Object.assign
+
+// const another = Object.assign({ colour: "yellow" }, circle);
+// console.log(another);
+
+// USE SPREAD OPERATOR
+const another = { ...circle };
+console.log(another);
