@@ -132,20 +132,67 @@ const circle = {
 //   zip: "12221",
 // };
 
-function factory(street, city, zip) {
-  return {
-    street,
-    city,
-    zip,
-  };
-}
+// function factory(street, city, zip) {
+//   return {
+//     street,
+//     city,
+//     zip,
+//   };
+// }
 
-const address = factory(1, 2, 3);
-console.log(address);
+// const address = factory(1, 2, 3);
+// console.log(address);
 
-function NewAddress(street, city, zip) {
-  (this.street = street), (this.city = city), (this.zip = zip);
-}
+// function NewAddress(street, city, zip) {
+//   (this.street = street), (this.city = city), (this.zip = zip);
+// }
 
-const newAddress = new NewAddress(1, 2, 3);
-console.log(newAddress);
+// const newAddress1 = new NewAddress(1, 2, 3);
+// const newAddress2 = new NewAddress(1, 2, 3);
+
+// function areEqual(address1, address2) {
+//   const keys1 = Object.keys(address1);
+//   const keys2 = Object.keys(address2);
+
+//   if (keys1.length !== keys2.length) return false;
+
+//   for (let key of keys1) {
+//     if (!keys2.includes(key)) return false;
+//   }
+//   return true;
+// }
+
+// console.log(areEqual(newAddress2, newAddress1));
+
+// console.log(areEqual(newAddress1, { street: 123, city: "london", zip: 12221 }));
+
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
+
+// const blogPost = {
+//   title: "t",
+//   body: "b",
+//   comments: [
+//     {
+//       author: "a",
+//       body: "B",
+//     },
+//     {
+//       author: "c",
+//       body: "d",
+//     },
+//   ],
+//   isLive: true,
+// };
+
+// const priceRangeObjects = [{low:0, high:10}]
+
+// ARRAYS
+const nums = [3, 4];
+
+nums.push(5, 6);
+nums.unshift(1, 2);
+nums.push(7);
+nums.splice(1, 4, "hi");
+console.log(nums);
