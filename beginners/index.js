@@ -189,10 +189,39 @@ const circle = {
 // const priceRangeObjects = [{low:0, high:10}]
 
 // ARRAYS
-const nums = [3, 4];
 
-nums.push(5, 6);
-nums.unshift(1, 2);
-nums.push(7);
-nums.splice(1, 4, "hi");
-console.log(nums);
+// adding elements
+// const nums = [3, 4];
+// nums.push(5, 6);
+// nums.unshift(1, 2);
+// nums.push(7);
+// nums.splice(1, 4, "hi");
+// console.log(nums);
+
+// Finding primitive types
+// const numbers = [1, 2, 3, 1, 4];
+// numbers.indexOf(2);
+// // with indexOf, if the given arguement is not in the array, it will return -1
+
+// numbers.indexOf(2,1)
+// // this will start searching from an element that matches 2, from index 1
+// numbers.lastIndexOf(1);
+
+// // to see if an given element is present is an array use:
+// console.log(numbers.indexOf(2) !== -1);
+// // or
+// console.log(numbers.includes(1));
+// console.log(numbers.lastIndexOf(1));
+
+// Finding reference types
+const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+// If you have an array with refrence types, like objects, use the find method
+
+const course = courses.find((course) => course.name === "a");
+console.log(course);
+
+const course1 = courses.findIndex((course) => course.name === "a");
+console.log(course1);
