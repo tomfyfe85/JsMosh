@@ -336,12 +336,44 @@
 //  If no accumulator is set, it is automaticall set to the first element
 
 // EXERCISE 1
-const nums = arrayFromRange(-10, -4);
+// const nums = arrayFromRange(-10, -4);
 
-console.log(nums);
+// console.log(nums);
 
-function arrayFromRange(min, max) {
-  const rangeArray = [];
-  for (let i = min; i <= max; i++) rangeArray.push(i);
-  return rangeArray;
-}
+// function arrayFromRange(min, max) {
+//   const rangeArray = [];
+//   for (let i = min; i <= max; i++) rangeArray.push(i);
+//   return rangeArray;
+// }
+
+// EXERCISE 2
+// write an includes method
+// const nums = [1, 2, 3, 4, 5];
+
+// console.log(includes(nums, 3));
+// console.log(includes(nums, 7));
+
+// function includes(array, ele) {
+//   return array.some((num) => num === ele);
+// }
+
+// const numbers = [1, 2, 3, 4, 1, 1];
+
+// const output = except(numbers, [1, 4]);
+
+// // expected output - [2,4]
+
+// console.log(output);
+
+// function except(array, excluded) {
+//   const output = [];
+//   for (let num of array) if (!excluded.includes(num)) output.push(num);
+
+//   return output;
+// }
+
+// moving an element
+// use console.error
+
+// return output;
+// }
