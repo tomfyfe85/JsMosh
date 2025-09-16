@@ -54,16 +54,16 @@
 
 // factory function
 // camel notation
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log("draw");
-    },
-  };
-}
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw() {
+//       console.log("draw");
+//     },
+//   };
+// }
 
-// const myCircle = createCircle(5);
+// // const myCircle = createCircle(5);
 // myCircle.draw();
 
 // constructor function
@@ -78,12 +78,12 @@ function createCircle(radius) {
 // const myCircle = new Circle(1);
 // console.log(myCircle.radius);
 
-const circle = {
-  radius: 1,
-  draw() {
-    console.log("draw");
-  },
-};
+// const circle = {
+//   radius: 1,
+//   draw() {
+//     console.log("draw");
+//   },
+// };
 
 // for (key in circle) console.log(key, circle[key]);
 
@@ -214,14 +214,134 @@ const circle = {
 // console.log(numbers.lastIndexOf(1));
 
 // Finding reference types
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
-// If you have an array with refrence types, like objects, use the find method
+// const courses = [
+//   { id: 1, name: "a" },
+//   { id: 2, name: "b" },
+// ];
+// // If you have an array with refrence types, like objects, use the find method
 
-const course = courses.find((course) => course.name === "a");
-console.log(course);
+// const course = courses.find((course) => course.name === "a");
+// console.log(course);
 
-const course1 = courses.findIndex((course) => course.name === "a");
-console.log(course1);
+// const course1 = courses.findIndex((course) => course.name === "a");
+// console.log(course1);
+
+// Removing elements:
+//  pop() - remove from end
+//  shift() - remove from start
+//  .splice(index_to_be_removed, elements to be removed from stated index)
+//  IE .splice(3, 1) - removes element at index 3
+//  IE .splice(3,2) - removes elements at index 3 and 4
+
+//  Emptying an array
+//  nums = [1,2,3,4]
+//  nums = []
+//  nums.length = 0 - trucates the array - prefered
+
+//  Combing and slicing arrays
+//  Use .concat to combine arrays
+//   first = [1,2,3]
+// second = [4,5,6]
+// new = first.concat(second); - returns new array
+//  .slice slices an array in two
+//  new.slice(2,4) - [3,4] - starts at index2 and finsihes the one before index 4
+//  new,slice(2) - [3,4,5,6] - slices all up to given index
+//  new.slice() returns a copy of the original
+
+//  the spread operator:
+//  conwst combined = [...first, ...second] - [1,2,3,4,5,6]
+//  with the spread operator, all elements are returned individually
+//  conwst combined = [...first, "hi" ...second] - [1,2,3, "hi", 4,5,6]
+//  const copy = [...combined] - creates a new array
+
+// ITERATING:
+//  const nums = [1,2,3,4]
+//  use a for of loop OR
+//  nums.forEach(number => function logic here));
+//  nums.forEach(number, index => function logic here));
+//  indexes can be accessed like this
+
+// getting indexes with the for in loop
+// const fruits = ['apple', 'banana', 'cherry'];
+// for (const [index, fruit] of fruits.entries()) {
+//   console.log(`Index: ${index}, Value: ${fruit}`);
+// }
+
+// JOINING ARRAYS
+// const nums = [1,2,3,4]
+// nums.join() - returns a string  "1234"
+// new = nums.join(',') - "1,2,3,4"
+//  new.split(",") is the same for strings - ["1", "2", "3", "4"]
+
+// Sorting arrays
+// const nums = [2,3,1]
+// nums.sort()
+// nums.reverse() sorts in reverse
+
+//  with objects
+// .sort() takes a function with 2 parameters a & b
+// const courses = [
+//   { id: 1, name: "node" },
+//   { id: 2, name: "js" },
+// ];
+
+// courses.sort((a, b) => {
+//   const nameA = a.name.toUpperCase();
+//   const nameB = b.name.toUpperCase();
+
+//   if (a.name < b.name) return -1;
+//   if (a.name > b.name) return 1;
+//   return 0;
+// });
+
+// console.log(courses);
+
+//EVERY - checks if every matches criteria
+//  returns a callback
+// nums = [1,2,3,4,5]
+// const allPos = numbers.every(value => return value >= 0 )
+// returns a boolean
+
+// filtering an Array
+// const nums = [1, 2, -1, 4, 5];
+
+// const filtered = nums.filter((value) => value >= 0);
+// console.log(filtered);
+// // [1,2,4,5]
+
+// // MAP method
+// const items = filtered.map((n) => "<li>" + n + "<li>");
+// console.log(items);
+// => ['<li>1<li>', '<li>2<li>', '<li>4<li>', '<li>5<li>']
+
+// Both return a new array and are chainable
+
+// const items = filtered.map((n) => ({ value: n }));
+// when returning an object you need to put them in () like ({object})
+
+// chained
+// const items = nums.filter((n) => n >= 0).map((n) => ({ value: n }));
+
+// REDUCE method
+//  reduce elements into a single value
+//  const nums = [3, 2, 5]
+//  .reduce takes a call back with 2 params and 2 arguments
+
+//  const sum = nums.reduce((accumulator, currentVal) =>{
+//  return accumulator + currentVal
+//   }, set accumulator - 0)
+//  If no accumulator is set, it is automaticall set to the first elemen
+
+//  const sum = nums.reduce((accumulator, currentVal) => accumulator + currentVal )
+//  If no accumulator is set, it is automaticall set to the first element
+
+// EXERCISE 1
+const nums = arrayFromRange(-10, -4);
+
+console.log(nums);
+
+function arrayFromRange(min, max) {
+  const rangeArray = [];
+  for (let i = min; i <= max; i++) rangeArray.push(i);
+  return rangeArray;
+}
